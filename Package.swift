@@ -10,9 +10,6 @@ let checksum = "ac6976cc0887f9f7ce8833d4508b0cf7586d8ae1e15dd95bd33fa4853d847e49
 // GoogleMaps-8.1.0
 let package = Package(
     name: "GoogleMaps",
-    platforms: [
-        .iOS(.v14)
-    ],
     products: [
         .library(
             name: "GoogleMapsFrameworks",
