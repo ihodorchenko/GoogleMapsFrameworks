@@ -14,7 +14,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "GoogleMaps",
+            name: "GoogleMapsFrameworks",
             targets: ["GoogleMaps", "GoogleMapsLibs"]),
     ],
     dependencies: [
