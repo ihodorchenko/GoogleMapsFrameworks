@@ -3,10 +3,11 @@
 
 import PackageDescription
 
-let version = "1.0.0"
+let version = "2.0.0"
 let moduleName = "GoogleMaps"
-let checksum = "70950e6ec6523dc496bb96ebdf0a7ebb20fdacfe0c3f8a9496c677a626237880"
+let checksum = "ac6976cc0887f9f7ce8833d4508b0cf7586d8ae1e15dd95bd33fa4853d847e49"
 
+// GoogleMaps-8.1.0
 let package = Package(
     name: "GoogleMaps",
     platforms: [
