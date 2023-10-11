@@ -3,30 +3,39 @@
 
 import PackageDescription
 
-let version = "2.0.0"
-let moduleName = "GoogleMaps"
-let checksum = "ac6976cc0887f9f7ce8833d4508b0cf7586d8ae1e15dd95bd33fa4853d847e49"
+let version = "3.0.0"
+let moduleName = "GoogleMapsFrameworks"
 
 // GoogleMaps-8.1.0
 let package = Package(
-    name: "GoogleMaps",
+    name: moduleName,
     products: [
         .library(
-            name: "GoogleMapsFrameworks",
-            targets: ["GoogleMaps", "GoogleMapsLibs"]),
+            name: moduleName,
+            targets: [moduleName, "GoogleMapsCore", "GoogleMapsBase", "GoogleMaps"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "GoogleMaps",
+            name: moduleName,
             dependencies: []
         ),
-        // shasum -a 256 GoogleMaps.zip | sed 's/ .*//'
+        // shasum -a 256 GoogleMapsCore.zip | sed 's/ .*//'
         .binaryTarget(
-            name: "GoogleMapsLibs",
-            url: "https://github.com/ihodorchenko/GoogleMapsFrameworks/releases/download/release/\(version)/\(moduleName).zip",
-            checksum: checksum
+            name: "GoogleMapsCore",
+            url: "https://github.com/ihodorchenko/GoogleMapsFrameworks/releases/download/release/\(version)/GoogleMapsCore.zip",
+            checksum: "37914ed2bffa631ca0958583fb300d4e1729c95cf5bc56427b2fe66608c2bf01"
+        ),
+        .binaryTarget(
+            name: "GoogleMapsBase",
+            url: "https://github.com/ihodorchenko/GoogleMapsFrameworks/releases/download/release/\(version)/GoogleMapsBase.zip",
+            checksum: "470ed27cd89da67fafbc53177be1f89f8498f24ff3c47c5cbe418cd10b8557d7"
+        ),
+        .binaryTarget(
+            name: "GoogleMaps",
+            url: "https://github.com/ihodorchenko/GoogleMapsFrameworks/releases/download/release/\(version)/GoogleMaps.zip",
+            checksum: "32446cadcbab0a93ea87075e55cfe67796471caf87173c91ae0638be7109c5ff"
         )
     ]
 )
